@@ -1,1 +1,1 @@
-# cControlLib
+# libControl
