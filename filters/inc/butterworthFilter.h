@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-typedef struct _bw_1st_order_lpf_signal_t* bw_1st_order_lpf_signal_t
+typedef struct _bw_1st_order_lpf_signal_t* bw_1st_order_lpf_signal_t;
 
 void register_bw_1st_order_lpf(const bw_1st_order_lpf_signal_t sig, const float fc_hz, const float fs_hz);
 
