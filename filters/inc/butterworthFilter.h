@@ -5,17 +5,22 @@
 extern "C" {
 #endif
 
-typedef struct _bw_1st_order_lpf_signal_t* bw_1st_order_lpf_signal_t;
+#include <stdint.h>
 
-void register_bw_1st_order_lpf(const bw_1st_order_lpf_signal_t sig, const float fc_hz, const float fs_hz);
+uint16_t register_bw_1st_order_lpf(const uint16_t fc_hz, const uint16_t fs_hz);
 
-float bw_1st_order_lpf(const bw_1st_order_lpf_signal_t sig, const float in);
+float bw_1st_order_lpf(const uint16_t id, const float in);
 
-void update_bw_1st_order_lpf_fc(const bw_1st_order_lpf_signal_t sig, const float fc_hz);
+void update_bw_1st_order_lpf_params(const uint16_t id, const uint16_t fc_hz);
 
+uint16_t register_bw_2nd_order_lpf(const uint16_t fc_hz, const uint16_t fs_hz);
+
+float bw_2nd_order_lpf(const uint16_t id, const float in);
+
+void update_bw_2nd_order_lpf_params(const uint16_t id, const uint16_t fc_hz);
 
 #ifdef __cplusplus 
-}                                                                                                  
+} 
 #endif
 
 #endif

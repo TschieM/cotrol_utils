@@ -7,6 +7,7 @@ project(libControl
 	"Controller library")
 
 add_subdirectory(filters)
+add_subdirectory(test)
 
 install(
 	EXPORT filters-export
